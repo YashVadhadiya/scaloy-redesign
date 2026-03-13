@@ -444,6 +444,80 @@
             font-size: 0.875rem;
         }
 
+        .latest-blogs { padding: 120px 0; background: var(--surface-dark); }
+
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .blog-card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .blog-card:hover { transform: translateY(-10px); }
+
+        .blog-image { height: 200px; overflow: hidden; }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image img { transform: scale(1.1); }
+
+        .blog-content { padding: 30px; }
+
+        .blog-date {
+            font-size: 0.875rem;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .blog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-accent);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .blog-link:hover { gap: 12px; }
+
+        .view-all-blogs {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid, .blogs-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid, .blogs-grid { grid-template-columns: 1fr; }
+        }
+
         .testimonials { padding: 120px 0; background: var(--surface-dark); }
 
         .testimonial-card {
@@ -903,6 +977,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Case Study</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             
@@ -1063,7 +1138,7 @@
                     <div class="project-overlay">
                         <span class="project-category">Lab Management</span>
                         <h3>Lab Sphere</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/lab-sphere.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -1072,7 +1147,7 @@
                     <div class="project-overlay">
                         <span class="project-category">Services</span>
                         <h3>Fix Pro</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/fix-pro.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -1081,7 +1156,7 @@
                     <div class="project-overlay">
                         <span class="project-category">E-Commerce</span>
                         <h3>Fab Edge</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/fab-edge.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -1090,7 +1165,7 @@
                     <div class="project-overlay">
                         <span class="project-category">Agriculture</span>
                         <h3>Agri Fusion</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/agri-fusion.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -1099,7 +1174,7 @@
                     <div class="project-overlay">
                         <span class="project-category">Technology</span>
                         <h3>Tech Nova</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/tech-nova.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -1108,9 +1183,60 @@
                     <div class="project-overlay">
                         <span class="project-category">Manufacturing</span>
                         <h3>Manu ERP</h3>
-                        <a href="portfolio.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
+                        <a href="case-study/manu-erp.html" class="project-link">Know More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-blogs">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Latest <span class="gradient-text">Blogs</span></h2>
+                <p>Insights & updates from our tech experts</p>
+            </div>
+            
+            <div class="blogs-grid">
+                <div class="blog-card glass-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Redis Cache Memory">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Oct 28, 2025</span>
+                        <h3>Redis Cache Memory</h3>
+                        <p>In modern enterprise systems, performance and speed directly impact user experience, revenue, and operations...</p>
+                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card glass-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop" alt="Digital Burnout">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Oct 23, 2025</span>
+                        <h3>Digital Burnout in IT</h3>
+                        <p>Digital burnout has emerged as one of the most pressing challenges in modern workplaces...</p>
+                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card glass-card reveal">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" alt="IoT in Modern Offices">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">Oct 8, 2025</span>
+                        <h3>IoT in the Modern Offices</h3>
+                        <p>The Smart Office represents a new era of workplace transformation driven by Internet of Things (IoT)...</p>
+                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-blogs reveal">
+                <a href="blog.html" class="btn btn-primary">View All Blogs <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
